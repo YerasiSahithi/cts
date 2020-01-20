@@ -1,0 +1,11 @@
+package com;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Hosteller h=new Hosteller(1, "aa","ece" ,999 , "f");
+System.out.println(h);
+	}
+
+}

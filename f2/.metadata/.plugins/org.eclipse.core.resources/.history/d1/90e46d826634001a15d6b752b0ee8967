@@ -1,0 +1,11 @@
+package com;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Students h=new Students(1, 77,"sa","ece","f");
+System.out.println(h);
+	}
+
+}

@@ -1,0 +1,23 @@
+package com;
+import java.util.stream.Stream;   
+class Employees
+{
+	int id,salary;
+	String name;
+	public Employees(int id, int salary, String name) {
+		super();
+		this.id = id;
+		this.salary = salary;
+		this.name = name;
+	}
+	
+	
+}
+public class LambdaExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

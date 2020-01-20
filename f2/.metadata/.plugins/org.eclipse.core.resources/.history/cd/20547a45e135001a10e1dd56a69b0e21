@@ -1,0 +1,18 @@
+package com;
+import java.io.FileOutputStream;  
+
+public class FileOutPutStreamExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        try{    
+            FileOutputStream fout=new FileOutputStream("E:\\hello.txt");    
+            fout.write(65);    
+            fout.close();    
+            System.out.println("success...");    
+           }catch(Exception e){System.out.println(e);}    
+     }    
+
+	}
+
+}
