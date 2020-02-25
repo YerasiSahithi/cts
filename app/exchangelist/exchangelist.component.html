@@ -1,0 +1,28 @@
+<table class="table table-hover table-sm" >
+
+    <thead class="thead-light">
+
+     <tr>
+
+      <th>Id</th>
+      <th>Stock Exchange</th>
+      <th>Brief</th>
+      <th>Contact Address</th>
+      <th>Remarks</th>
+
+     </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let exchange of stockExchangeList ">
+  
+          <td>{{exchange.id}}</td>
+          <td>{{exchange.stockExchange}}</td>
+          <td>{{exchange.brief}}</td>
+          <td>{{exchange.contactAddress}}</td>
+        <td>{{exchange.remarks}}</td>
+        </tr>
+    
+    
+    
+       </tbody>
+  

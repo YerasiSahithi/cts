@@ -1,0 +1,146 @@
+<div class="container py-5">
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card border-secondary">
+                        <body>
+                            <div class="card-header">
+                                <h3 class="mb-0 my-2">Sign Up</h3>
+                            </div>
+
+                            <div class="card-body">
+                                <div [hidden]="submitted" style="width:400px;">
+                                    <form [formGroup]="usersaveform" #saveUser1 (ngSubmit)="saveUser(saveUser1)">
+
+
+                                        <div class="form-group">
+                                            <label for="userType">User Type</label>
+
+                                            <input type="text" class="form-control" formControlName="userType" placeholder="">
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <label for="Id">Id</label>
+                                            <input type="number" class="form-control" formControlName="Id"
+                                                data-toggle="tooltip" data-placement="right" title="User Id"
+                                                required="required">
+                                            <div class="alert alert-danger" *ngIf="(UId.touched) && (UId.invalid)"
+                                                style="margin-top: 5px;">
+                                                <span *ngIf="UId.errors.required">Id is Required</span>
+                                                <span *ngIf="UId.errors.minlength">
+
+                                                    MinLength 4 letters
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+
+                                            <label for="userName">UserName</label>
+                                            <input type="text" class="form-control" formControlName="userName"
+                                                data-toggle="tooltip" data-placement="right" title="Enter User Name"
+                                                required="required">
+                                            <div class="alert alert-danger"
+                                                *ngIf="(UserName.touched) && (UserName.invalid)"
+                                                style="margin-top: 5px;">
+
+                                                <span *ngIf="UserName.errors.required">user Name is Required</span>
+
+                                                <span *ngIf="UserName.errors.minlength">
+
+                                                    MinLength Error
+
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <label for="password">Password</label>
+                                            <input type="password" class="form-control" formControlName="password"
+                                                data-toggle="tooltip" data-placement="right" title="Enter Password"
+                                                required="required">
+                                            <div class="alert alert-danger"
+                                                *ngIf="(Password.touched) && (Password.invalid)"
+                                                style="margin-top: 5px;">
+
+                                                <span *ngIf="Password.errors.required">Password is Required</span>
+
+                                                <span *ngIf="Password.errors.minlength">
+
+
+                                                </span>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" id="email"formControlName="email"data-toggle="tooltip"data-placement="right" title="Enter Email"
+                                                placeholder="email@gmail.com" required="required">
+                                                <div class="alert alert-danger"
+                                                *ngIf="(Email.touched) && (Email.invalid)"
+                                                style="margin-top: 5px;">
+
+                                                <span *ngIf="Email.errors.required">Email is Required</span>
+
+                                                <span *ngIf="Email.errors.minlength">
+
+                                                    Invalid Email Format
+
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group">
+
+                                            <label for="phone">Phone</label>
+                                            <input type="text" class="form-control" formControlName="phone"
+                                                data-toggle="tooltip" data-placement="right" title="Enter phone"
+                                                required="required">
+                                            <div class="alert alert-danger" *ngIf="(Phone.touched) && (Phone.invalid)"
+                                                style="margin-top: 5px;">
+
+                                                <span *ngIf="Phone.errors.required">Number is Required</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+
+                                            <label for="confirmed">Confirm</label>
+                                            <input type="text" class="form-control" formControlName="confirmed"id="confirmed" placeholder=""
+                                                required="required">
+                                        </div>
+
+                                        <div class="radio">
+                                            <label><input type="radio" name="optradio" checked>Admin &nbsp;</label>
+                                            <label><input type="radio" name="optradio">User</label>
+                                        </div>
+
+                                        <button type="submit"
+                                            class="btn btn-success btn-lg float-right">Register</button>
+
+                                    </form>
+
+                                </div>
+                            </div>
+
+                            <div [hidden]="!submitted">
+
+                                <button (click)="usersaveform()"></button>
+                                </div>
+                        </body>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

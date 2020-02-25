@@ -1,0 +1,125 @@
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card border-secondary">
+                        <body>
+                        <div class="card-header">
+
+                            <h3 class="mb-0 my-2">Create New IPO</h3>
+                            <div [hidden]="submitted" style="width:400px;">
+                                <form [formGroup]="iposaveform" #saveIPO1 (ngSubmit)="saveIPO(saveIPO1)">
+
+
+                                    <div class="form-group">
+                                        <label for="id">Id</label>
+
+                                        <input type="number" class="form-control" formControlName="id" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="companyName">Company Name</label>
+                                        <input type="text" class="form-control" formControlName="companyName"
+                                            data-toggle="tooltip" data-placement="right" title="stock exchange"
+                                            required="required">
+                                        <div class="alert alert-danger" *ngIf="(CompanyName.touched) && (CompanyName.invalid)"
+                                            style="margin-top: 5px;">
+                                            <span *ngIf="CompanyName.errors.required">Company Name is Required</span>
+                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label for="stockExchange">stock Exchange</label>
+                                        <input type="text" class="form-control" formControlName="stockExchange"
+                                            data-toggle="tooltip" data-placement="right" title="Enter stock exchange"
+                                            required="required">
+                                        <div class="alert alert-danger"
+                                            *ngIf="(StockExchange.touched) && (StockExchange.invalid)"
+                                            style="margin-top: 5px;">
+
+                                            <span *ngIf="StockExchange.errors.required">stock exchnage is Required</span>
+
+            
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="price">Price</label>
+                                        <input type="number" class="form-control" formControlName="price"
+                                            data-toggle="tooltip" data-placement="right" title="price"
+                                            required="required">
+                                        <div class="alert alert-danger"
+                                            *ngIf="(Price.touched) && (Price.invalid)"
+                                            style="margin-top: 5px;">
+                                            <span *ngIf="Price.errors.required"> Must Specify</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="noShare">Shares</label>
+                                        <input type="number" class="form-control"  formControlName="noShare" data-toggle="tooltip"data-placement="right" title="Enter Shares"
+                                            placeholder="" required="required">
+                                            <div class="alert alert-danger"
+                                            *ngIf="(NoShare.touched) && (NoShare.invalid)"
+                                            style="margin-top: 5px;">
+                                            <span *ngIf="NoShare .errors.required"> Must Specify</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label for="remarks">Remarks</label>
+                                        <input type="text" class="form-control" formControlName="remarks"
+                                            data-toggle="tooltip" data-placement="right" title="Enter remarks"
+                                            required="required">
+                                        <div class="alert alert-danger" *ngIf="(Remarks.touched) && (Remarks.invalid)"
+                                            style="margin-top: 5px;">
+
+                                            <span *ngIf="Remarks.errors.required"> Required</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label for="opendatetime">Date</label>
+                                        <input type="date" class="form-control" formControlName="opendatetime"id="opendatetime" placeholder=""
+                                            required="required">
+                                            <div class="alert alert-danger" *ngIf="(Opendatetime.touched) && (Opendatetime.invalid)"
+                                            style="margin-top: 5px;">
+
+                                            <span *ngIf="Opendatetime.errors.required"> Required</span>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <button type="submit"
+                                        class="btn btn-success btn-lg float-right">Register</button>
+
+                                </form>
+
+                            </div>
+
+                        
+                    </div>
+                    <div [hidden]="!submitted">
+
+                        <button (click)="companysaveform()"></button>
+                        </div>
+
+                    </body>
+                    </div>
+                </div>
+            </div>
+            <!--/row-->
+
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->
+    
+</div>    <!--/container-->

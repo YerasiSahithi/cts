@@ -1,0 +1,35 @@
+<table class="table table-hover table-sm" >
+
+    <thead class="thead-light">
+
+     <tr>
+      <th>Id</th>
+      <th>Company Name</th>
+      <th>Stock exchnage</th>
+      <th>Price</th>
+      <th>Number of Shares</th>
+      <th>Remarks</th>
+      <th>Date</th>
+
+     </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ipo of IPOList ">
+            <td>{{ipo.id}}</td>
+          <td>{{ipo.companyName}}</td>
+          <td>{{ipo.stockExchange}}</td>
+          <td>{{ipo.price}}</td>
+        <td>{{ipo.noShare}}</td>
+        <td>{{ipo.remarks}}</td>
+        <td>{{ipo.opendatetime}}</td>
+        </tr>
+    
+    
+    
+       </tbody>
+    
+    
+    
+       </table>
+    
+     
